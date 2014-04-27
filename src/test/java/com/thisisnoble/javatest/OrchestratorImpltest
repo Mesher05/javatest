@@ -1,0 +1,65 @@
+import java.util.*;
+public class OrchestratorImpl implements Event{
+
+
+@Test
+ void register(){
+  ArrayList<Processor> processors=new ArrayList<Processor>();
+  assertNotNull(processors);
+  Processor p1 = new Processor();
+  assertNotNull(processor);
+  processors.add(p1);
+  
+  Processor p2 = new Processor();
+  assertNotNull(processor);
+  processors.add(p2);
+  
+  Processor p3 = new Processor();
+  assertNotNull(processor);
+  processors.add(p3);
+  
+ }
+ 
+
+@Test
+ void receive(Event event){
+    BlockingQueue queue= new ArrayBlockingQueue<Event>(20);
+    assertNotNull(queue);
+    
+    Event e1 = new Event();
+    assertNotNull(event);
+    queue.put(e1);
+    
+    Event e2 = new Event();
+    assertNotNull(event);
+    queue.put(e2);
+    
+    Event e3 = new Event();
+    assertNotNull(event);
+    queue.put(e3);
+    
+    Event e4 = new Event();
+    assertNotNull(event);
+    queue.put(e4);
+}
+    
+@Test
+ void setup(){
+ 
+  BlockingQueue publisher= new ArrayBlockingQueue<Event>(20);
+  assertNotNull(publisher);
+  Event e = new ShippingEvent();
+  assertNotNull(e);
+  publisher.put(e);
+  Event e1 = new RiskEvent();
+  assertNotNull(e1);
+  publisher.put(e1);
+  
+  
+  for (Even ev:publisher){
+    publish(event);
+  
+  }
+ }
+
+}
