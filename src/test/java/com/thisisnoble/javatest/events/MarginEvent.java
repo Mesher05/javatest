@@ -4,10 +4,6 @@ import com.thisisnoble.javatest.Event;
 
 public class MarginEvent implements Event {
 
-    private final String id;
-    private final String parentId;
-    private final double margin;
-
     public MarginEvent() {
         String id = "123456";
         String parentId = "parentId";
