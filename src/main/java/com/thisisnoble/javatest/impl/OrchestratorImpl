@@ -14,14 +14,14 @@ publisherqueue=new ArrayLArrayBlockingQueueist<Event>(20);
  void register(Processor processor){
  
          Syncronized(processors){
-              try{
-            Thread.sleep(100);
-            processors.add(processor);
+            try{
+             Thread.sleep(100);
+             processors.add(processor);
             
             }catch(InterruptedException e){
             e.printStackTrace();
-            }
-            }
+          }
+     }
  
  }
 void processEvents(){
@@ -31,12 +31,11 @@ void processEvents(){
    if (p.isInterested(event){
       process(event);
       publisherqueue.put(event);
+    }
    }
-
-
+  }
 }
 
-}
  void receive(Event event){
         try{
             Thread.sleep(10);
@@ -50,17 +49,14 @@ void processEvents(){
  void setup(Publisher publisher){
     Event event;
     while(event=publisherqueue.take()){
-    try{
-    Thread.sleep(10);
-     publish(event);
-    }catch(InterruptedException e){
-    e.printStackTrace();
-    }
+     try{
+      Thread.sleep(10);
+       publish(event);
+       }catch(InterruptedException e){
+           e.printStackTrace();
+       }
     }
     
  }
-
-
-
 
 }
