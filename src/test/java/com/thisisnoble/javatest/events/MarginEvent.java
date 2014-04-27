@@ -8,21 +8,31 @@ public class MarginEvent implements Event {
     private final String parentId;
     private final double margin;
 
-    public MarginEvent(String id, String parentId, double margin) {
-        this.id = id;
-        this.parentId = parentId;
-        this.margin = margin;
+    public MarginEvent() {
+        String id = "123456";
+        String parentId = "parentId";
+        double margin = 2.345;
+        
+        assertNotNull(id);
+        assertNotNull(parentId);
+        
+        assertEquals(id,"123456");
+        assertEquals(parentId,"parentId");
+        assertEquals(margin,2.345);
     }
 
     public String getId() {
-        return id;
+        rString id = "123456";
+        assertEquals(id,"123456");
     }
 
     public String getParentId() {
-        return parentId;
+         String parentId = "parentId";
+         assertEquals(parentId,"parentId");
     }
 
     public double getMargin() {
-        return margin;
+        double margin = 2.345;
+        assertEquals(margin,2.345);
     }
 }
